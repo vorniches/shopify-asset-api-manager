@@ -7,7 +7,7 @@
         "test": "jest",
         "build": "babel src --out-dir dist"
     },
-    "author": "Your Name",
+    "author": "Sérgio Vorniches",
     "license": "MIT",
     "dependencies": {
         "https": "^1.0.0"
