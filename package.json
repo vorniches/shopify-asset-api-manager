@@ -7,6 +7,16 @@
         "test": "jest",
         "build": "babel src --out-dir dist"
     },
+    "keywords": [
+        "shopify",
+        "assets",
+        "api",
+        "theme",
+        "theme assets",
+        "shopify assets",
+        "shopify api",
+        "shopify assets api"
+    ],
     "author": "Sérgio Vorniches",
     "license": "MIT",
     "bugs": {
