@@ -20,37 +20,37 @@ class AssetAPIRequest {
     makeRequest() {
         const data = {
             asset: {
-            key: this.assetKey,
-            value: this.assetValue
-        }
-    };
+                key: this.assetKey,
+                value: this.assetValue
+            }
+        };
     
-    const options = {
-        hostname: `${this.storeName}.myshopify.com`,
-        port: 443,
-        path: `/admin/api/${this.apiVersion}/themes/${this.themeID}/assets.json`,
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Shopify-Access-Token': this.accessToken
-        }
-    };
+        const options = {
+            hostname: `${this.storeName}.myshopify.com`,
+            port: 443,
+            path: `/admin/api/${this.apiVersion}/themes/${this.themeID}/assets.json`,
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Shopify-Access-Token': this.accessToken
+            }
+        };
     
-    const req = https.request(options, res => {
-        let result = '';
-        res.on('data', chunk => {
-            result += chunk;
+        const req = https.request(options, res => {
+            let result = '';
+            res.on('data', chunk => {
+                result += chunk;
+            });
+            res.on('end', () => {
+                console.log(result);
+            });
         });
-        res.on('end', () => {
-            console.log(result);
+    
+        req.on('error', error => {
+            console.error(error);
         });
-    });
     
-    req.on('error', error => {
-        console.error(error);
-    });
-    
-    req.write(JSON.stringify(data));
+        req.write(JSON.stringify(data));
         req.end();
     }
 }
