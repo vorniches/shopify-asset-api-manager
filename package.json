@@ -9,6 +9,10 @@
     },
     "author": "Sérgio Vorniches",
     "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vorniches/shopify-asset-api-manager/issues"
+    },
+    "homepage": "https://github.com/vorniches/shopify-asset-api-manager#readme",
     "dependencies": {
         "https": "^1.0.0"
     },
