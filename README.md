@@ -1,0 +1,1 @@
+# shopify-asset-api-manager
