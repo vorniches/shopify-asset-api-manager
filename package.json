@@ -1,6 +1,6 @@
 {
     "name": "shopify-asset-api-manager",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A package for making requests to the Shopify Asset API to manage assets in a theme",
     "main": "src/index.js",
     "scripts": {
